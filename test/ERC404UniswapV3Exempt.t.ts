@@ -70,7 +70,6 @@ describe("ERC404UniswapV3Exempt", function () {
     const contract = await factory.deploy(
       name,
       symbol,
-      decimals,
       maxTotalSupplyERC721,
       initialOwner.address,
       initialMintRecipient.address,
