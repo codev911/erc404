@@ -19,7 +19,6 @@ async function main() {
   const erc404V2Contract = await erc404V2Factory.deploy(
     "ERC404Example",
     "ERC404",
-    18,
     500,
     signers[0].address,
     signers[0].address,
@@ -33,7 +32,6 @@ async function main() {
   const erc404U16V2Contract = await erc404U16V2Factory.deploy(
     "ERC404ExampleU16",
     "ERC404U16",
-    18,
     500,
     signers[0].address,
     signers[0].address,

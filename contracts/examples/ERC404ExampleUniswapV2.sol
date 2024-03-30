@@ -10,13 +10,12 @@ contract ERC404ExampleUniswapV2 is Ownable, ERC404, ERC404UniswapV2Exempt {
   constructor(
     string memory name_,
     string memory symbol_,
-    uint8 decimals_,
     uint256 maxTotalSupplyERC721_,
     address initialOwner_,
     address initialMintRecipient_,
     address uniswapV2Router_
   )
-    ERC404(name_, symbol_, decimals_)
+    ERC404(name_, symbol_)
     Ownable(initialOwner_)
     ERC404UniswapV2Exempt(uniswapV2Router_)
   {

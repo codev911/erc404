@@ -9,11 +9,10 @@ contract ERC404Example is Ownable, ERC404 {
   constructor(
     string memory name_,
     string memory symbol_,
-    uint8 decimals_,
     uint256 maxTotalSupplyERC721_,
     address initialOwner_,
     address initialMintRecipient_
-  ) ERC404(name_, symbol_, decimals_) Ownable(initialOwner_) {
+  ) ERC404(name_, symbol_) Ownable(initialOwner_) {
     // Do not mint the ERC721s to the initial owner, as it's a waste of gas.
     _setERC721TransferExempt(initialMintRecipient_, true);
     _mintERC20(initialMintRecipient_, maxTotalSupplyERC721_ * units);

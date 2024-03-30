@@ -21,7 +21,6 @@ describe("ERC404", function () {
     const contract = await factory.deploy(
       name,
       symbol,
-      decimals,
       maxTotalSupplyERC721,
       initialOwner.address,
       initialMintRecipient.address,
@@ -147,7 +146,6 @@ describe("ERC404", function () {
     const contract = await factory.deploy(
       name,
       symbol,
-      decimals,
       initialOwner.address,
     )
     await contract.waitForDeployment()

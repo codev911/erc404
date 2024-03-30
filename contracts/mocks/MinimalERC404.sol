@@ -9,9 +9,8 @@ contract MinimalERC404 is Ownable, ERC404 {
   constructor(
     string memory name_,
     string memory symbol_,
-    uint8 decimals_,
     address initialOwner_
-  ) ERC404(name_, symbol_, decimals_) Ownable(initialOwner_) {}
+  ) ERC404(name_, symbol_) Ownable(initialOwner_) {}
 
   function mintERC20(address account_, uint256 value_) external onlyOwner {
     _mintERC20(account_, value_);
